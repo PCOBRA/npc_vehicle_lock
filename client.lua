@@ -84,7 +84,7 @@ Citizen.CreateThread(function()
         local vehicles = GetGamePool('CVehicle')
 
         for _, vehicle in ipairs(vehicles) do
-            if DoesEntityExist(vehicle) and GetCanVehicleBeLocked(vehicle) and GetPedInVehicleSeat(vehicle, -1) == 0 then
+            if DoesEntityExist(vehicle) and GetPedInVehicleSeat(vehicle, -1) == 0 then
                 local vehicleCoords = GetEntityCoords(vehicle)
                 local distance = #(playerCoords - vehicleCoords)
                 if distance < 50.0 then
